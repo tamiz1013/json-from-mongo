@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const router = require('./handlers/gmailHandler');
 
+const port = process.env.PORT || 4000;
+
 const mongoPath =
     'mongodb+srv://gmail:avSelIPJDhLf9Bpw@tamiz.grit7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
@@ -15,14 +17,9 @@ mongoose
     .catch((err) => {
         console.log(err);
     });
+
 app.use('/', router);
-
-app.get('/',(req,res)=>{
-    res.send('server running on port 4000');
-    console.log('test');
-    res.end();
-})
-
-app.listen(4000, (req,res) => {
-
+app.use('/', (req, res) => {
+    res.send('Hi!');
 });
+app.listen(port, (req, res) => {});

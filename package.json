@@ -5,6 +5,9 @@
     "mongoose": "^6.1.6",
     "yarn": "^1.22.17"
   },
+  "scripts": {
+    "start": "node index.js"
+  },
   "devDependencies": {
     "eslint": "8.2.0",
     "eslint-config-airbnb-base": "15.0.0",

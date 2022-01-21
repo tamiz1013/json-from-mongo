@@ -7,9 +7,6 @@
     "commonjs": true,
     "node": true
   },
-  "scripts": {
-    "start": "nodemon index.js"
-  },
   "rules": {
     "new-cap": "off",
     "no-var": "off",
